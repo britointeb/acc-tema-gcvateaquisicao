@@ -1,0 +1,74 @@
+SITE GCV 2026 — VERSÃO 4 — COLOG / AAC
+
+COMO ABRIR
+Extraia o ZIP inteiro e abra index.html no navegador.
+Mantenha os arquivos CSS, app.js e a pasta assets junto ao HTML.
+O site funciona sem internet e sem instalação de bibliotecas.
+
+ARQUIVOS
+index.html           Conteúdo, cabeçalho institucional e fluxogramas.
+styles.css           Estrutura, diagramas, responsividade e animações.
+tema-colog.css       Tema preto, branco e dourado, tipografia e menu lateral.
+app.js               Interações, busca, navegação e controles de animação.
+assets/colog.png     Símbolo do Comando Logístico fornecido pelo usuário.
+assets/aac.png       Símbolo da Assessoria de Aquisições Complexas fornecido.
+assets/icons.svg     Ícones vetoriais originais também incorporados ao HTML.
+LEIA-ME.txt          Estas instruções.
+
+IDENTIDADE VISUAL
+Tema inspirado na imagem de referência: cabeçalho preto com os dois símbolos,
+linha dourada, navegação lateral clara e conteúdo sobre superfícies brancas.
+Os símbolos foram preservados nos arquivos originais, sem redesenho.
+Em telas menores, o menu lateral abre pelo botão no cabeçalho.
+
+FONTES
+Títulos, identidade institucional e rótulos principais usam Arial Rounded MT Bold.
+Alternativas: Arial Rounded MT, Trebuchet MS e Arial.
+Textos corridos usam Arial para diferenciar os níveis de leitura.
+A Arial Rounded MT Bold está instalada no computador usado nesta edição.
+As fontes são procuradas no sistema do visitante; não há downloads externos
+nem arquivos de fontes no pacote. Em outro computador, a aparência pode usar
+uma das alternativas caso a Arial Rounded não esteja instalada.
+
+CONTEÚDO E INTERAÇÕES
+Os conteúdos foram reorganizados em seis capítulos, conforme MODIFICACOES.pptx:
+01 Ciclo de vida; 02 A solução; 03 Categorias da solução; 04 A decisão;
+05 O processo anterior; 06 O processo recomendado.
+O NDI aparece como gênero acima das três categorias interativas.
+Diretrizes aparecem em retângulos vermelhos, e reuniões em preto.
+Destaques em azul, amarelo, verde e vermelho complementam o tema institucional.
+O material permanece em HTML e CSS, sem capturas de slides ou galeria de imagens.
+Clique nas fases do ciclo de vida, nas rotas da demanda, nos componentes da
+solução, nas categorias e nas modelagens para explorar suas explicações.
+A busca pode ser aberta pela lupa ou pela tecla /.
+A abertura apresenta cinco etapas com links: demanda, concepção, planejamento,
+seleção e eventual contratação. O sumário também permite navegar pelos números.
+As três modelagens aparecem lado a lado, com a explicação selecionada abaixo.
+Cada painel destaca os procedimentos auxiliares ou de apoio antes do título,
+com suas condições: facultativos, obrigatórios quando cabíveis ou desnecessários.
+O ciclo de conhecimento termina com o símbolo original da AAC.
+As normas citadas aparecem em uma lista na seção de referências.
+
+ACESSIBILIDADE
+Tab percorre controles; setas, Home e End alternam as abas.
+Esc fecha a busca e o menu do celular.
+O item ativo do menu acompanha a leitura dos capítulos.
+O botão Pausar animações fica na parte inferior do menu.
+A preferência de movimento reduzido do sistema também é respeitada.
+As imagens institucionais têm textos alternativos; diagramas e textos
+continuam selecionáveis, com adaptação para telas pequenas.
+
+EDIÇÃO
+Edite o conteúdo em index.html.
+As cores e fontes do tema ficam no início de tema-colog.css.
+Edite os comportamentos e as descrições dinâmicas em app.js.
+Para publicar, envie estes arquivos e a pasta assets a uma hospedagem estática.
+O ponto de entrada é index.html; não há backend ou etapa de compilação.
+
+BASE DO CONTEÚDO
+ESTAGIO_GCV_2026_V2.pptx — Cel Brito, COLOG / AAC, 7 de outubro de 2026.
+Versão 4, de 8 de outubro de 2026, orientada por MODIFICACOES_2.pptx,
+a partir da versão 3. A versão anterior permanece preservada na pasta SITE.
+Esta edição atualiza textos, hierarquia visual, fluxos e navegação da versão web.
+As proposições, condições e exemplos continuam vinculados ao material fornecido.
+O arquivo original e as versões anteriores foram preservados.
