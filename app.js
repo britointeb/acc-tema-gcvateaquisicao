@@ -60,9 +60,9 @@
   }));
 
   const systems = [
-    { title: 'O núcleo do fornecimento.', text: 'O contrato principal integra o fornecimento da solução. Sua definição precisa conversar com o apoio logístico, as compensações e as condições financeiras que compõem a aquisição.' },
-    { title: 'A sustentação acompanha a solução.', text: 'O contrato SLI / ALI reúne a dimensão de suporte e apoio logístico apresentada no conteúdo. Sua integração com o contrato principal relaciona a aquisição à utilização da solução ao longo do ciclo de vida.' },
-    { title: 'As compensações integram o conjunto.', text: 'O contrato de compensação é apresentado como um componente da solução sistêmica. Seus compromissos precisam ser considerados em conjunto com o fornecimento e as demais relações contratuais.' },
+    { title: $('#system-title').textContent, text: $('#system-description').textContent },
+    { title: 'A sustentação acompanha a solução.', text: 'O contrato SLI / ALI reúne a dimensão de suporte e apoio logístico. Sua integração com o contrato principal relaciona a aquisição à utilização da solução ao longo do ciclo de vida.' },
+    { title: 'As compensações integram o conjunto.', text: 'O contrato de compensação integra a solução sistêmica. Seus compromissos precisam ser considerados em conjunto com o fornecimento e as demais relações contratuais.' },
     { title: 'As condições financeiras também importam.', text: 'O contrato financeiro compõe a visão sistêmica da aquisição. A análise das condições de financiamento e dos compromissos correspondentes participa da compreensão da solução.' }
   ];
   $$('[data-system]').forEach(button => button.addEventListener('click', () => {
@@ -105,21 +105,46 @@
     });
   }
 
+  // Abre a bibliografia antes de navegar a uma referência recolhida.
+  $$('a[href^="#ref-"]').forEach(link => link.addEventListener('click', () => {
+    $('#referencias details').open = true;
+  }));
+  if (location.hash.startsWith('#ref-')) $('#referencias details').open = true;
+
   const menu = $('#menu-button');
+  const navToggle = $('#nav-toggle');
   const sidebar = $('#site-sidebar');
   const backdrop = $('#menu-backdrop');
   const compactNav = matchMedia('(max-width: 1100px)');
+  let desktopSidebarOpen = true;
   function setMenu(open) {
-    const expanded = compactNav.matches && open;
+    const expanded = Boolean(open);
+    if (!compactNav.matches) desktopSidebarOpen = expanded;
     sidebar.classList.toggle('open', expanded);
-    sidebar.inert = compactNav.matches && !expanded;
-    backdrop.hidden = !expanded;
-    document.body.classList.toggle('menu-open', expanded);
-    menu.setAttribute('aria-expanded', String(expanded));
-    menu.setAttribute('aria-label', expanded ? 'Fechar navegação' : 'Abrir navegação');
+    sidebar.inert = !expanded;
+    sidebar.setAttribute('aria-hidden', String(!expanded));
+    document.body.classList.toggle('sidebar-collapsed', !compactNav.matches && !expanded);
+    document.body.classList.toggle('menu-open', compactNav.matches && expanded);
+    backdrop.hidden = !compactNav.matches || !expanded;
+    const action = expanded ? 'Recolher barra lateral' : 'Exibir barra lateral';
+    [menu, navToggle].forEach(button => {
+      button.setAttribute('aria-expanded', String(expanded));
+      button.setAttribute('aria-label', action);
+      button.setAttribute('title', action);
+    });
+    menu.querySelector('.menu-label').textContent = expanded ? 'Recolher menu' : 'Exibir menu';
+    navToggle.querySelector('.nav-toggle-icon').textContent = expanded ? '−' : '+';
+    if (!expanded && sidebar.contains(document.activeElement)) menu.focus({ preventScroll: true });
   }
-  function closeMenu() { setMenu(false); }
-  menu.addEventListener('click', () => setMenu(menu.getAttribute('aria-expanded') !== 'true'));
+  // No computador, a navegação e a busca preservam a preferência da barra.
+  function closeMenu() { if (compactNav.matches) setMenu(false); }
+  function toggleMenu() {
+    const expanded = menu.getAttribute('aria-expanded') !== 'true';
+    setMenu(expanded);
+    announce(expanded ? 'Barra lateral exibida.' : 'Barra lateral recolhida.');
+  }
+  menu.addEventListener('click', toggleMenu);
+  navToggle.addEventListener('click', toggleMenu);
   backdrop.addEventListener('click', () => { closeMenu(); menu.focus(); });
   $$('#main-nav a, .sidebar-brand').forEach(link => link.addEventListener('click', () => {
     const destination = document.querySelector(link.hash);
@@ -131,18 +156,18 @@
     }
   }));
   document.addEventListener('keydown', event => {
-    if (!sidebar.classList.contains('open')) return;
+    if (!compactNav.matches || !sidebar.classList.contains('open')) return;
     if (event.key === 'Escape') { closeMenu(); menu.focus(); }
     if (event.key === 'Tab') {
-      const focusable = [...sidebar.querySelectorAll('a,button'), menu];
+      const focusable = [...sidebar.querySelectorAll('a,button'), menu].filter(item => item.getClientRects().length && !item.disabled);
       const current = focusable.indexOf(document.activeElement);
       const next = (current + (event.shiftKey ? -1 : 1) + focusable.length) % focusable.length;
       event.preventDefault();
       focusable[next].focus();
     }
   });
-  compactNav.addEventListener('change', closeMenu);
-  closeMenu();
+  compactNav.addEventListener('change', () => setMenu(compactNav.matches ? false : desktopSidebarOpen));
+  setMenu(!compactNav.matches);
 
   const chapters = $$('.section');
   let scrollQueued = false;

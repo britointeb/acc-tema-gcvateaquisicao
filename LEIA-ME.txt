@@ -1,4 +1,4 @@
-SITE GCV 2026 — VERSÃO 4 — COLOG / AAC
+SITE GCV 2026 — VERSÃO 7 — COLOG / AAC
 
 COMO ABRIR
 Extraia o ZIP inteiro e abra index.html no navegador.
@@ -31,9 +31,10 @@ nem arquivos de fontes no pacote. Em outro computador, a aparência pode usar
 uma das alternativas caso a Arial Rounded não esteja instalada.
 
 CONTEÚDO E INTERAÇÕES
-Os conteúdos foram reorganizados em seis capítulos, conforme MODIFICACOES.pptx:
+Os conteúdos estão organizados em oito capítulos:
 01 Ciclo de vida; 02 A solução; 03 Categorias da solução; 04 A decisão;
-05 O processo anterior; 06 O processo recomendado.
+05 O processo anterior; 06 O processo recomendado;
+07 Aperfeiçoamento normativo; 08 Capacidade institucional.
 O NDI aparece como gênero acima das três categorias interativas.
 Diretrizes aparecem em retângulos vermelhos, e reuniões em preto.
 Destaques em azul, amarelo, verde e vermelho complementam o tema institucional.
@@ -42,12 +43,25 @@ Clique nas fases do ciclo de vida, nas rotas da demanda, nos componentes da
 solução, nas categorias e nas modelagens para explorar suas explicações.
 A busca pode ser aberta pela lupa ou pela tecla /.
 A abertura apresenta cinco etapas com links: demanda, concepção, planejamento,
-seleção e eventual contratação. O sumário também permite navegar pelos números.
+seleção e contratação. O sumário também permite navegar pelos números.
 As três modelagens aparecem lado a lado, com a explicação selecionada abaixo.
 Cada painel destaca os procedimentos auxiliares ou de apoio antes do título,
 com suas condições: facultativos, obrigatórios quando cabíveis ou desnecessários.
-O ciclo de conhecimento termina com o símbolo original da AAC.
-As normas citadas aparecem em uma lista na seção de referências.
+A escala de flexibilidade acompanha as três rotas de modelagem.
+A pré-concepção e a concepção estão separadas no fluxo da demanda.
+O contexto de programa/projeto possui uma divisória pontilhada.
+O ciclo Aprender, Aplicar, Analisar, Aperfeiçoar e Reter termina com o símbolo
+original da AAC. O núcleo da solução tem formato circular.
+As normas citadas têm referências bibliográficas completas na seção Referências.
+A Portaria C Ex nº 2.152/2024 e as EB10-IG-01.018 compõem uma só entrada.
+Os dispositivos sobre EV/ETP e PRODE/PED/SD são identificados junto às explicações.
+O botão Exibir/Recolher esconde ou mostra toda a barra lateral.
+No computador, o conteúdo passa a ocupar o espaço liberado.
+O botão do cabeçalho permanece disponível para reabrir a barra.
+Duas setas em degradê, com pontas nas duas extremidades, indicam aderência
+normativa, segurança jurídica e risco. A linha do tempo acompanha sua largura.
+O capítulo 08 inclui o texto de apoio sobre fortalecer estruturas de decisão.
+A visão sistêmica da aquisição e o desfecho das três rotas têm destaque ampliado.
 
 ACESSIBILIDADE
 Tab percorre controles; setas, Home e End alternam as abas.
@@ -67,8 +81,12 @@ O ponto de entrada é index.html; não há backend ou etapa de compilação.
 
 BASE DO CONTEÚDO
 ESTAGIO_GCV_2026_V2.pptx — Cel Brito, COLOG / AAC, 7 de outubro de 2026.
-Versão 4, de 8 de outubro de 2026, orientada por MODIFICACOES_2.pptx,
-a partir da versão 3. A versão anterior permanece preservada na pasta SITE.
+Versão 7, de 9 de outubro de 2026, orientada pelos comentários dos quatro slides
+de MODIFICACOES_4.pptx, a partir da versão 6 editada pessoalmente pelo usuário.
+As alterações pessoais dessa versão 6 foram preservadas.
+A conferência dos dispositivos usa o texto oficial das leis no Planalto e
+o exemplar das EB10-IG-01.018 fornecido na pasta de normas.
+A versão anterior permanece preservada na pasta SITE.
 Esta edição atualiza textos, hierarquia visual, fluxos e navegação da versão web.
 As proposições, condições e exemplos continuam vinculados ao material fornecido.
 O arquivo original e as versões anteriores foram preservados.
