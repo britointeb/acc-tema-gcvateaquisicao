@@ -1,92 +1,99 @@
-SITE GCV 2026 — VERSÃO 7 — COLOG / AAC
+SITE GCV 2026 — VERSÃO 8 — COLOG / AAC
+Edição web: 29 de outubro de 2026.
 
 COMO ABRIR
-Extraia o ZIP inteiro e abra index.html no navegador.
-Mantenha os arquivos CSS, app.js e a pasta assets junto ao HTML.
-O site funciona sem internet e sem instalação de bibliotecas.
+Abra index.html em um navegador. Mantenha os CSS, app.js e a pasta assets
+juntos. O site funciona offline, sem bibliotecas externas ou compilação.
+
+O QUE MUDOU
+A versão 8 parte da site-gcv-v7 e aplica a organização do SITE_COPEC_V2:
+menu hierárquico, quatro blocos explícitos, seções numeradas, índice de cada
+bloco, superfícies azul-claras, detalhes dourados e fotografias dos assets.
+O cabeçalho institucional, os símbolos, os fluxos e as interações da v7
+foram mantidos. As referências existentes continuam vinculadas ao conteúdo
+original; esta edição não constitui nova conferência normativa.
+
+PERCURSO
+Introdução: visão geral, fotos dos sistemas e as cinco etapas da aquisição.
+Bloco 1 — Contexto e solução
+  1.1 Ciclo de vida
+  1.2 A solução de MEM/SMEM
+  1.3 Categorias da solução
+Bloco 2 — Decisão e diagnóstico
+  2.1 O momento da decisão
+  2.2 O processo anterior
+Bloco 3 — Seleção e contratação
+  3.1 O processo recomendado
+  3.2 Aperfeiçoamento normativo
+Bloco 4 — Capacidade e referências
+  4.1 Capacidade institucional
+  4.2 Siglas e referências
+
+NAVEGAÇÃO E ACESSIBILIDADE
+O menu pode ser recolhido e reaberto pelo botão do cabeçalho. Em telas
+pequenas funciona como painel sobreposto e fecha por Esc.
+O item ativo e o bloco correspondente acompanham a leitura.
+A busca abre pela lupa ou pela tecla / e mostra a numeração dos blocos.
+As abas funcionam por clique, setas, Home e End. Tab percorre os controles.
+A opção de movimento reduzido do sistema e o botão de pausa são respeitados.
+As fotos possuem textos alternativos e carregamento adiado fora da abertura.
+Os links e os identificadores da versão 7 foram preservados.
+
+IMPRESSÃO
+Use Imprimir no cabeçalho ou Ctrl+P. O botão aguarda o carregamento das
+imagens. As seções recolhidas são abertas temporariamente, todos os painéis
+de abas são incluídos e os quatro blocos têm divisórias próprias.
+As referências são incluídas na impressão; o menu e os botões são ocultados.
+O estado das seções recolhidas é restaurado ao sair da impressão.
 
 ARQUIVOS
-index.html           Conteúdo, cabeçalho institucional e fluxogramas.
-styles.css           Estrutura, diagramas, responsividade e animações.
-tema-colog.css       Tema preto, branco e dourado, tipografia e menu lateral.
-app.js               Interações, busca, navegação e controles de animação.
-assets/colog.png     Símbolo do Comando Logístico fornecido pelo usuário.
-assets/aac.png       Símbolo da Assessoria de Aquisições Complexas fornecido.
-assets/icons.svg     Ícones vetoriais originais também incorporados ao HTML.
-LEIA-ME.txt          Estas instruções.
+index.html                         Conteúdo e organização em blocos.
+styles.css                         Base de estrutura e diagramas da v7.
+tema-colog.css                     Tema institucional da v7.
+gcv-v8.css                         Ajustes visuais e responsivos desta edição.
+app.js                             Interações, busca, menu e impressão.
+assets/colog.png, aac.png           Símbolos originais da v7.
+assets/icons.svg                   Ícones originais da v7.
+assets/smem.png                    Composição Centauro, ATMOS, Lince e Black Hawk.
+assets/centauro.jpg                 Fotografia de blindado.
+assets/atmos.jpg                    Fotografia de artilharia.
+assets/black-hawk.jpg               Fotografia de aviação.
+ATUALIZAR_AAC_GCV_GITHUB.bat        Publicador para GitHub adaptado da COPEC.
 
-IDENTIDADE VISUAL
-Tema inspirado na imagem de referência: cabeçalho preto com os dois símbolos,
-linha dourada, navegação lateral clara e conteúdo sobre superfícies brancas.
-Os símbolos foram preservados nos arquivos originais, sem redesenho.
-Em telas menores, o menu lateral abre pelo botão no cabeçalho.
+As quatro imagens de sistemas foram copiadas, sem alteração, dos assets
+de SITE_COPEC_V2. Ilustram o objeto da aquisição e não indicam a modalidade
+de contratação ou o estágio de um projeto. Nenhuma foto depende da internet.
+Fontes: Arial Rounded MT Bold e alternativas locais; corpo em Arial.
 
-FONTES
-Títulos, identidade institucional e rótulos principais usam Arial Rounded MT Bold.
-Alternativas: Arial Rounded MT, Trebuchet MS e Arial.
-Textos corridos usam Arial para diferenciar os níveis de leitura.
-A Arial Rounded MT Bold está instalada no computador usado nesta edição.
-As fontes são procuradas no sistema do visitante; não há downloads externos
-nem arquivos de fontes no pacote. Em outro computador, a aparência pode usar
-uma das alternativas caso a Arial Rounded não esteja instalada.
+PUBLICAÇÃO PELO BAT
+1. Instale Git for Windows com Git Credential Manager.
+2. Dê duplo clique no BAT e informe a URL HTTPS do repositório GCV no GitHub.
+   Também pode executá-lo em um terminal com a URL como primeiro argumento.
+3. Conclua o login pelo Git Credential Manager, caso seja solicitado.
+4. Confira repositório, branch, origem e lista de arquivos adicionados,
+   modificados e removidos. Digite PUBLICAR para confirmar, ou Enter para
+   cancelar. O BAT atualiza a raiz inteira do repositório escolhido.
 
-CONTEÚDO E INTERAÇÕES
-Os conteúdos estão organizados em oito capítulos:
-01 Ciclo de vida; 02 A solução; 03 Categorias da solução; 04 A decisão;
-05 O processo anterior; 06 O processo recomendado;
-07 Aperfeiçoamento normativo; 08 Capacidade institucional.
-O NDI aparece como gênero acima das três categorias interativas.
-Diretrizes aparecem em retângulos vermelhos, e reuniões em preto.
-Destaques em azul, amarelo, verde e vermelho complementam o tema institucional.
-O material permanece em HTML e CSS, sem capturas de slides ou galeria de imagens.
-Clique nas fases do ciclo de vida, nas rotas da demanda, nos componentes da
-solução, nas categorias e nas modelagens para explorar suas explicações.
-A busca pode ser aberta pela lupa ou pela tecla /.
-A abertura apresenta cinco etapas com links: demanda, concepção, planejamento,
-seleção e contratação. O sumário também permite navegar pelos números.
-As três modelagens aparecem lado a lado, com a explicação selecionada abaixo.
-Cada painel destaca os procedimentos auxiliares ou de apoio antes do título,
-com suas condições: facultativos, obrigatórios quando cabíveis ou desnecessários.
-A escala de flexibilidade acompanha as três rotas de modelagem.
-A pré-concepção e a concepção estão separadas no fluxo da demanda.
-O contexto de programa/projeto possui uma divisória pontilhada.
-O ciclo Aprender, Aplicar, Analisar, Aperfeiçoar e Reter termina com o símbolo
-original da AAC. O núcleo da solução tem formato circular.
-As normas citadas têm referências bibliográficas completas na seção Referências.
-A Portaria C Ex nº 2.152/2024 e as EB10-IG-01.018 compõem uma só entrada.
-Os dispositivos sobre EV/ETP e PRODE/PED/SD são identificados junto às explicações.
-O botão Exibir/Recolher esconde ou mostra toda a barra lateral.
-No computador, o conteúdo passa a ocupar o espaço liberado.
-O botão do cabeçalho permanece disponível para reabrir a barra.
-Duas setas em degradê, com pontas nas duas extremidades, indicam aderência
-normativa, segurança jurídica e risco. A linha do tempo acompanha sua largura.
-O capítulo 08 inclui o texto de apoio sobre fortalecer estruturas de decisão.
-A visão sistêmica da aquisição e o desfecho das três rotas têm destaque ampliado.
-
-ACESSIBILIDADE
-Tab percorre controles; setas, Home e End alternam as abas.
-Esc fecha a busca e o menu do celular.
-O item ativo do menu acompanha a leitura dos capítulos.
-O botão Pausar animações fica na parte inferior do menu.
-A preferência de movimento reduzido do sistema também é respeitada.
-As imagens institucionais têm textos alternativos; diagramas e textos
-continuam selecionáveis, com adaptação para telas pequenas.
+O destino não foi presumido a partir do repositório COPEC. O BAT publica a
+própria pasta e suas subpastas, exceto o BAT, .git, desktop.ini e Thumbs.db.
+O clone de trabalho fica em %LOCALAPPDATA%\AAC-GCV\Publicacoes.
+Quando já houver histórico, VERSAO_ANTERIOR.bundle guarda o estado anterior
+nesse diretório. A pasta de origem e o histórico de commits são preservados.
+O publicador detecta conteúdo idêntico, descobre a branch principal, recusa
+origem sem index.html ou assets e recusa arquivos acima de 100 MiB.
+Arquivos HardLink usados pelo Google Drive são aceitos e copiados pelo
+conteúdo. Links simbólicos e junções continuam bloqueados.
+Confere alterações concorrentes e nunca utiliza push forçado.
+Nenhuma publicação no GitHub foi executada durante a criação desta versão.
+Se GitHub Pages estiver configurado, aguarde o processamento após o envio.
 
 EDIÇÃO
-Edite o conteúdo em index.html.
-As cores e fontes do tema ficam no início de tema-colog.css.
-Edite os comportamentos e as descrições dinâmicas em app.js.
-Para publicar, envie estes arquivos e a pasta assets a uma hospedagem estática.
-O ponto de entrada é index.html; não há backend ou etapa de compilação.
+Edite os textos em index.html e os ajustes desta versão em gcv-v8.css.
+As descrições dinâmicas e os controles ficam em app.js.
+Para outra hospedagem estática, envie o conteúdo desta pasta; index.html
+é o ponto de entrada. O BAT não é necessário na hospedagem.
 
-BASE DO CONTEÚDO
-ESTAGIO_GCV_2026_V2.pptx — Cel Brito, COLOG / AAC, 7 de outubro de 2026.
-Versão 7, de 9 de outubro de 2026, orientada pelos comentários dos quatro slides
-de MODIFICACOES_4.pptx, a partir da versão 6 editada pessoalmente pelo usuário.
-As alterações pessoais dessa versão 6 foram preservadas.
-A conferência dos dispositivos usa o texto oficial das leis no Planalto e
-o exemplar das EB10-IG-01.018 fornecido na pasta de normas.
-A versão anterior permanece preservada na pasta SITE.
-Esta edição atualiza textos, hierarquia visual, fluxos e navegação da versão web.
-As proposições, condições e exemplos continuam vinculados ao material fornecido.
-O arquivo original e as versões anteriores foram preservados.
+BASE
+Conteúdo: ESTAGIO_GCV_2026_V2.pptx e alterações incorporadas à site-gcv-v7.
+Referência de organização, cores e publicação: COPEC/SITE_COPEC_V2.
+As pastas e os arquivos das versões anteriores foram preservados.

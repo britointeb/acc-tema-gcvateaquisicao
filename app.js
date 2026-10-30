@@ -84,6 +84,33 @@
     announce(reverse ? 'Com inversão: habilitação, julgamento, adjudicação e homologação.' : 'Sem inversão: julgamento, habilitação, adjudicação e homologação.');
   });
 
+  const printButton = $('#print-button');
+  printButton.addEventListener('click', async () => {
+    if (printButton.disabled) return;
+    printButton.disabled = true;
+    printButton.textContent = 'Preparando…';
+    try {
+      // Carregar também as imagens fora da tela antes de abrir a impressão.
+      await Promise.all($$('img').map(async image => {
+        image.loading = 'eager';
+        if (image.decode) await image.decode().catch(() => {});
+      }));
+      await new Promise(resolve => requestAnimationFrame(resolve));
+      printButton.disabled = false;
+      printButton.textContent = 'Imprimir';
+      window.print();
+    } finally {
+      printButton.disabled = false;
+      printButton.textContent = 'Imprimir';
+    }
+  });
+  let detailsBeforePrint = [];
+  window.addEventListener('beforeprint', () => {
+    detailsBeforePrint = $$('details').map(item => [item, item.open]);
+    detailsBeforePrint.forEach(([item]) => item.open = true);
+  });
+  window.addEventListener('afterprint', () => detailsBeforePrint.forEach(([item, open]) => item.open = open));
+
   const motionButton = $('#motion-toggle');
   function syncMotion() {
     document.documentElement.classList.toggle('motion-paused', motionPaused);
@@ -170,12 +197,15 @@
   setMenu(!compactNav.matches);
 
   const chapters = $$('.section');
+  const readingStops = $$('.section, .gcv-block-divider');
   let scrollQueued = false;
   function updateScroll() {
     const available = document.documentElement.scrollHeight - innerHeight;
     $('#page-progress').style.width = `${available > 0 ? Math.min(100, Math.round(scrollY / available * 100)) : 0}%`;
     let active = 'inicio';
-    chapters.forEach(section => { if (section.getBoundingClientRect().top < 180) active = section.id; });
+    readingStops.forEach(section => { if (section.getBoundingClientRect().top < 180) active = section.id; });
+    const activeBlock = document.getElementById(active)?.dataset.block;
+    $$('#main-nav .nav-block').forEach(block => block.classList.toggle('current-block', block.dataset.block === activeBlock));
     $$('#main-nav a').forEach(link => {
       const selected = link.hash === `#${active}`;
       link.classList.toggle('active', selected);
@@ -194,7 +224,7 @@
   const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
   const searchSections = chapters.slice(1).map((section, index) => ({
     id: section.id,
-    number: index + 1,
+    number: section.dataset.number || String(index + 1).padStart(2, '0'),
     label: section.dataset.label,
     title: section.querySelector('h2').innerText.replace(/\s+/g, ' '),
     text: normalize(section.textContent)
@@ -207,7 +237,7 @@
     $('#search-status').textContent = !words.length ? 'Escolha um tema ou digite um termo para filtrar.' : `${found.length} ${found.length === 1 ? 'assunto encontrado' : 'assuntos encontrados'}.`;
     found.forEach(section => {
       const result = document.createElement('button'); result.className = 'search-result';
-      const number = document.createElement('span'); number.textContent = `0${section.number}`;
+      const number = document.createElement('span'); number.textContent = section.number;
       const content = document.createElement('span');
       const label = document.createElement('strong'); label.textContent = section.label;
       const title = document.createElement('small'); title.textContent = section.title;
