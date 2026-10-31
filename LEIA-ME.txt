@@ -1,99 +1,175 @@
-SITE GCV 2026 — VERSÃO 8 — COLOG / AAC
-Edição web: 29 de outubro de 2026.
+SITE GCV — VERSÃO 9 — COLOG / AAC
+Atualização: 31 de outubro de 2026.
 
-COMO ABRIR
-Abra index.html em um navegador. Mantenha os CSS, app.js e a pasta assets
-juntos. O site funciona offline, sem bibliotecas externas ou compilação.
+ABERTURA E ARQUIVOS
+Abra index.html em um navegador atual. O site funciona offline e não precisa
+de instalação, servidor, framework, bibliotecas externas ou compilação.
+Mantenha estes arquivos juntos:
+  index.html                      Estrutura, conteúdo e diagramas editáveis.
+  styles.css                      Única folha de estilos.
+  app.js                          Único script de interação.
+  assets/                         Imagens utilizadas pelo site.
+  ATUALIZAR_AAC_GCV_GITHUB.bat     Publicador para GitHub.
+  LEIA-ME.txt                     Este guia.
 
-O QUE MUDOU
-A versão 8 parte da site-gcv-v7 e aplica a organização do SITE_COPEC_V2:
-menu hierárquico, quatro blocos explícitos, seções numeradas, índice de cada
-bloco, superfícies azul-claras, detalhes dourados e fotografias dos assets.
-O cabeçalho institucional, os símbolos, os fluxos e as interações da v7
-foram mantidos. As referências existentes continuam vinculadas ao conteúdo
-original; esta edição não constitui nova conferência normativa.
+BASE E CONTEÚDO
+A edição parte da site-gcv-v8, incluindo suas alterações editoriais atuais.
+Aplica os padrões gerais de COPEC/SITE_COPEC_V3 ao conteúdo da GCV.
+Os identificadores e links internos da versão 8 foram preservados.
+As referências jurídicas continuam vinculadas ao conteúdo de origem; esta
+edição organiza o site e não representa nova revisão normativa.
+A v8 e as demais versões anteriores permanecem preservadas.
 
-PERCURSO
-Introdução: visão geral, fotos dos sistemas e as cinco etapas da aquisição.
-Bloco 1 — Contexto e solução
-  1.1 Ciclo de vida
-  1.2 A solução de MEM/SMEM
-  1.3 Categorias da solução
-Bloco 2 — Decisão e diagnóstico
-  2.1 O momento da decisão
-  2.2 O processo anterior
-Bloco 3 — Seleção e contratação
-  3.1 O processo recomendado
-  3.2 Aperfeiçoamento normativo
-Bloco 4 — Capacidade e referências
-  4.1 Capacidade institucional
-  4.2 Siglas e referências
+ORGANIZAÇÃO
+Introdução — #inicio (controle independente).
+Bloco 1 — Contexto e solução — #bloco-1
+  1.1 Ciclo de vida — #ciclo
+  1.2 A solução de MEM/SMEM — #solucao
+  1.3 Categorias da solução — #categorias
+Bloco 2 — Decisão e diagnóstico — #bloco-2
+  2.1 O momento da decisão — #decisao
+  2.2 O processo anterior — #processo
+Bloco 3 — Seleção e contratação — #bloco-3
+  3.1 O processo recomendado — #recomendado
+  3.2 Aperfeiçoamento normativo — #evolucao
+Bloco 4 — Capacidade institucional — #bloco-4
+  4.1 Capacidade institucional — #capacidade
+Conclusão — #conclusao (controle independente).
+Siglas e referências — #referencias (consulta independente dos blocos).
 
-NAVEGAÇÃO E ACESSIBILIDADE
-O menu pode ser recolhido e reaberto pelo botão do cabeçalho. Em telas
-pequenas funciona como painel sobreposto e fecha por Esc.
-O item ativo e o bloco correspondente acompanham a leitura.
-A busca abre pela lupa ou pela tecla / e mostra a numeração dos blocos.
-As abas funcionam por clique, setas, Home e End. Tab percorre os controles.
-A opção de movimento reduzido do sistema e o botão de pausa são respeitados.
-As fotos possuem textos alternativos e carregamento adiado fora da abertura.
-Os links e os identificadores da versão 7 foram preservados.
+PADRÕES DE APRESENTAÇÃO
+Cabeçalho fixo, banner institucional e rodapé escuros; conteúdo claro,
+textos escuros e detalhes azuis/dourados, conforme a COPEC V3.
+Os controles do cabeçalho aparecem nesta ordem: Imprimir, Recolher/Expandir
+Blocos/Tópicos, Recolher/Exibir Menu Lateral e busca.
+Até 1100 px, o menu vira painel sobreposto. Até 700 px, o cabeçalho usa
+duas linhas para conservar os rótulos completos.
+Títulos e identidade usam Arial Rounded MT Bold, Arial Rounded MT,
+Trebuchet MS e Arial. O corpo usa Arial/Helvetica. Não há fontes remotas.
+Parágrafos e itens de listas são justificados. Rótulos e identificação
+institucional preservam seu alinhamento próprio.
+Introdução e conclusão usam fundo branco, título escuro, ponto dourado e
+controle no canto superior direito.
+As fotos de Centauro, ATMOS e Black Hawk mantêm proporção 3:2 em qualquer
+largura, sem altura fixa em pixels e sem recorte do conteúdo da imagem.
+
+LEITURA E CONTROLES
+Cada bloco possui seu painel .gcv-block-content; cada tópico, seu painel
+.gcv-topic-content. aria-controls relaciona cada botão ao painel e
+aria-expanded informa seu estado.
+Recolher um bloco mantém seu cabeçalho e índice visíveis. Recolher um
+tópico mantém número, título e texto de apoio visíveis.
+Reabrir um bloco preserva o estado individual de seus tópicos.
+O controle geral afeta os quatro blocos e oito tópicos; introdução,
+conclusão e referências permanecem independentes.
+Menu, índices, busca e endereços com #âncora reabrem o conteúdo necessário.
+O estado vale para a página aberta e não é salvo em armazenamento local.
+Abas respondem a clique, toque, setas, Home e End. Tab percorre os controles.
+A tecla / abre a busca. Escape fecha a busca e o menu móvel.
+O foco de teclado permanece no menu móvel enquanto estiver aberto.
+As três rotas da demanda, os quatro componentes contratuais, as categorias,
+a decisão e as modelagens preservam as interações da GCV.
+As descrições dos quatro contratos estão no HTML, sem textos editoriais
+gerados pelo JavaScript.
+
+ANIMAÇÕES
+Os oito tópicos sobem 15 px em 0,65 s; as quatro faixas de bloco entram
+24 px pela esquerda, com escala inicial 0,98, em 0,7 s.
+IntersectionObserver usa threshold 0 para atender também tópicos longos.
+A entrada acontece apenas na primeira passagem; o título não é animado
+separadamente do tópico. Os painéis de abas têm transição própria.
+O botão de pausa e prefers-reduced-motion são respeitados.
+Sem JavaScript, os corpos dos blocos e tópicos ficam abertos e os controles
+programados ficam ocultos. Não há ocultação por animação nessa situação.
 
 IMPRESSÃO
-Use Imprimir no cabeçalho ou Ctrl+P. O botão aguarda o carregamento das
-imagens. As seções recolhidas são abertas temporariamente, todos os painéis
-de abas são incluídos e os quatro blocos têm divisórias próprias.
-As referências são incluídas na impressão; o menu e os botões são ocultados.
-O estado das seções recolhidas é restaurado ao sair da impressão.
+O botão Imprimir aguarda o carregamento das imagens. Ctrl+P também funciona.
+Todos os blocos, tópicos, abas, rotas, contratos e detalhes são incluídos;
+menu e controles ficam ocultos. Os estados anteriores de recolhimento e
+detalhes são restaurados depois. Eventos repetidos não sobrescrevem o
+estado original da leitura.
 
-ARQUIVOS
-index.html                         Conteúdo e organização em blocos.
-styles.css                         Base de estrutura e diagramas da v7.
-tema-colog.css                     Tema institucional da v7.
-gcv-v8.css                         Ajustes visuais e responsivos desta edição.
-app.js                             Interações, busca, menu e impressão.
-assets/colog.png, aac.png           Símbolos originais da v7.
-assets/icons.svg                   Ícones originais da v7.
-assets/smem.png                    Composição Centauro, ATMOS, Lince e Black Hawk.
-assets/centauro.jpg                 Fotografia de blindado.
-assets/atmos.jpg                    Fotografia de artilharia.
-assets/black-hawk.jpg               Fotografia de aviação.
-ATUALIZAR_AAC_GCV_GITHUB.bat        Publicador para GitHub adaptado da COPEC.
+CSS E MANUTENÇÃO
+Há apenas um styles.css e um @charset. Não existem CSS separados por versão,
+blocos style no HTML ou declarações inline.
+Foram removidos seletores herdados sem uso e declarações sobrescritas.
+Regras de um mesmo seletor foram reunidas quando isso preserva a cascata.
+Seletores independentes são ordenados alfabeticamente. Contextos de mídia,
+estados e blocos de continuidade mantêm sua precedência. Um seletor pode
+aparecer em contextos diferentes sem representar duplicação indevida.
+Não ordenar propriedades automaticamente: font/font-size, border/border-top,
+padding/padding-top e abreviações com var() dependem da ordem original.
+Para alterar um componente, edite sua regra e seu contexto existentes;
+evite acrescentar outra folha de estilos ou remendos ao final do arquivo.
+As cores e dimensões compartilhadas usam variáveis CSS em :root.
 
-As quatro imagens de sistemas foram copiadas, sem alteração, dos assets
-de SITE_COPEC_V2. Ilustram o objeto da aquisição e não indicam a modalidade
-de contratação ou o estágio de um projeto. Nenhuma foto depende da internet.
-Fontes: Arial Rounded MT Bold e alternativas locais; corpo em Arial.
+JAVASCRIPT E MANUTENÇÃO
+app.js usa escopo fechado e modo estrito. As inicializações são separadas
+por responsabilidade: abas, diagramas GCV, recolhimento, menu, busca,
+impressão e movimento. Referências e listas de elementos são reutilizadas.
+Um único tratamento de abas atende os quatro grupos. A busca delega o
+clique dos resultados e insere os resultados em um fragmento de documento.
+Atualizações de rolagem são agrupadas com requestAnimationFrame; um único
+IntersectionObserver controla as entradas. Não há consultas remotas,
+dependências de execução, credenciais ou configuração de serviço no site.
+Mudanças de IDs, data-* e relações ARIA exigem atualizar o controle associado.
+
+ASSETS
+As fotos JPEG originais são utilizadas sem alteração.
+Emblemas e composição de sistemas foram convertidos para WebP sem perda
+dos pixels visíveis; a transparência e as dimensões foram conferidas.
+Essa conversão reduziu cerca de 2,4 MB nos arquivos de imagem.
+O SVG de ícones duplicado foi retirado dos assets; os símbolos usados
+continuam incorporados ao HTML e funcionam offline.
+As imagens contextualizam o objeto da aquisição; não atribuem modalidade
+de contratação ou estágio a um projeto.
 
 PUBLICAÇÃO PELO BAT
-1. Instale Git for Windows com Git Credential Manager.
-2. Dê duplo clique no BAT e informe a URL HTTPS do repositório GCV no GitHub.
-   Também pode executá-lo em um terminal com a URL como primeiro argumento.
-3. Conclua o login pelo Git Credential Manager, caso seja solicitado.
-4. Confira repositório, branch, origem e lista de arquivos adicionados,
-   modificados e removidos. Digite PUBLICAR para confirmar, ou Enter para
-   cancelar. O BAT atualiza a raiz inteira do repositório escolhido.
+Execute ATUALIZAR_AAC_GCV_GITHUB.bat dentro da pasta que deseja publicar.
+Configuração fixa, adaptada da COPEC V3 para este projeto:
+  Repositório: https://github.com/britointeb/acc-tema-gcvateaquisicao
+  Conta: britointeb
+  Nome do autor: Brito
+  E-mail do autor: britointeb@gmail.com
+A autoria é configurada apenas no clone da publicação, sem alterar o Git
+global. O Git Credential Manager reutiliza a sessão da conta e pode pedir
+login no navegador quando necessário.
 
-O destino não foi presumido a partir do repositório COPEC. O BAT publica a
-própria pasta e suas subpastas, exceto o BAT, .git, desktop.ini e Thumbs.db.
-O clone de trabalho fica em %LOCALAPPDATA%\AAC-GCV\Publicacoes.
-Quando já houver histórico, VERSAO_ANTERIOR.bundle guarda o estado anterior
-nesse diretório. A pasta de origem e o histórico de commits são preservados.
-O publicador detecta conteúdo idêntico, descobre a branch principal, recusa
-origem sem index.html ou assets e recusa arquivos acima de 100 MiB.
-Arquivos HardLink usados pelo Google Drive são aceitos e copiados pelo
-conteúdo. Links simbólicos e junções continuam bloqueados.
-Confere alterações concorrentes e nunca utiliza push forçado.
-Nenhuma publicação no GitHub foi executada durante a criação desta versão.
-Se GitHub Pages estiver configurado, aguarde o processamento após o envio.
+Antes da revisão há três campos, com Enter para aceitar os padrões:
+1. Título da atualização: nome da pasta; nesta versão, site-gcv-v9.
+2. Descrição complementar: Brito.
+3. Branch de destino: main.
+Título e descrição são gravados em arquivo UTF-8 para preservar acentos,
+aspas e símbolos literais na mensagem do commit.
 
-EDIÇÃO
-Edite os textos em index.html e os ajustes desta versão em gcv-v8.css.
-As descrições dinâmicas e os controles ficam em app.js.
-Para outra hospedagem estática, envie o conteúdo desta pasta; index.html
-é o ponto de entrada. O BAT não é necessário na hospedagem.
+Se a branch já existir, o BAT parte do histórico dela. Se for nova, parte
+da branch padrão do repositório; em repositório vazio, cria a primeira.
+Uma branch nova recebe commit mesmo quando os arquivos coincidirem com a
+base. Em branch existente com conteúdo idêntico, nenhum commit é criado.
+As demais branches não são alteradas. O nome é validado pelo Git.
 
-BASE
-Conteúdo: ESTAGIO_GCV_2026_V2.pptx e alterações incorporadas à site-gcv-v7.
-Referência de organização, cores e publicação: COPEC/SITE_COPEC_V2.
-As pastas e os arquivos das versões anteriores foram preservados.
+O BAT mostra destino, branch, título, descrição, autoria, origem e arquivos
+adicionados/modificados/removidos. Digite PUBLICAR para confirmar ou Enter
+para cancelar. A publicação substitui os arquivos da raiz da branch pela
+pasta de origem, mantendo o histórico anterior.
+O BAT, .git, desktop.ini e Thumbs.db ficam excluídos do envio.
+HardLinks usados pelo Google Drive são aceitos e copiados pelo conteúdo;
+links simbólicos e junções continuam bloqueados.
+O publicador exige index.html, styles.css, app.js e assets, recusa arquivos
+acima de 100 MiB e confere alterações concorrentes antes de enviar.
+Não há push forçado. O hash final é conferido no remoto.
+Requer Git for Windows com Git Credential Manager.
+Clones, mensagem e VERSAO_ANTERIOR.bundle ficam em:
+  %LOCALAPPDATA%\AAC-GCV\Publicacoes
+GitHub Pages depende da configuração do repositório e da branch escolhida.
+Criar esta versão local não executa publicação no GitHub.
+
+VALIDAÇÃO DESTA ENTREGA
+Conferidos: HTML, links, IDs, ARIA, imagens, arquivo único por tipo,
+conteúdo preservado, recolhimento, navegação, busca, abas, foco, impressão,
+movimento reduzido, funcionamento offline e leitura sem JavaScript.
+Responsividade verificada em 13 larguras, de 320 a 1920 px.
+A consolidação do CSS foi comparada em 17 cenários de tela, impressão e
+estados de leitura. A conferência visual foi feita no Edge local.
+O publicador é testado no Windows PowerShell 5.1 com repositórios locais,
+sem executar publicação no GitHub do usuário.
